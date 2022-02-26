@@ -1,9 +1,9 @@
 project "OpenAL-Soft"
 	kind "StaticLib"
 	language "C++"
-	cppdialect "C++14"
+	cppdialect "C++17"
 	staticruntime "on"
-
+	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -34,7 +34,8 @@ project "OpenAL-Soft"
 	
 	filter "system:windows"
 		systemversion "latest"
-
+		cppdialect "C++17"
+		
 		defines
 		{
 			"WIN32",
